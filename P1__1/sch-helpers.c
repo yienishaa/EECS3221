@@ -273,6 +273,8 @@ int readProcess(process *dest) {
     
     char *line = readLine();
     char *ptr = line;
+
+    
     
     if (line == NULL) return 0;
     
@@ -290,6 +292,8 @@ int readProcess(process *dest) {
     dest->bursts[0].length = firstBurst;
     dest->bursts[0].step = 0;
     dest->numberOfBursts = 1;
+
+    //printf("PID=%d\tArrivalTime=%d\tFirstBurst=%d\t\n",dest->pid,dest->arrivalTime,dest->bursts[0].length);
     
     /* read in the rest of the io and cpu bursts in pairs ([IO, CPU], ...) */
     while (!empty(ptr)) {
@@ -314,6 +318,8 @@ int readProcess(process *dest) {
         dest->bursts[dest->numberOfBursts].step = 0;
         dest->bursts[dest->numberOfBursts].length = cpuBurstLength;
         dest->numberOfBursts++;
+
+        
     }
     free(line);
     
