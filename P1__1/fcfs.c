@@ -1,9 +1,5 @@
 /* 
-Family Name: Abeyratne
-Given Name(s): Yienisha
-Student Number: 218462515
-EECS Login ID (the one you use to access the red server): yienisha
-YorkU email address (the one that appears in eClass): yienisha@my.yorku.ca
+
 */
 
 #include "sch-helpers.h"
